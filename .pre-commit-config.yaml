@@ -5,10 +5,10 @@ repos:
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
 -   repo: https://github.com/nicklockwood/SwiftFormat
-    rev: 0.54.6
+    rev: 0.55.5
     hooks:
     -   id: swiftformat
 -   repo: https://github.com/realm/SwiftLint
-    rev: 0.57.0
+    rev: 0.58.2
     hooks:
     -   id: swiftlint

@@ -18,7 +18,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     .package(url: "https://github.com/marmelroy/PhoneNumberKit.git", from: "3.8.0"),
     .package(url: "git@github.com:powerhome/power-fonts.git", from: "0.0.1"),
-    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.17.6")
+    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.17.7")
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
