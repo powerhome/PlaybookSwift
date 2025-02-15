@@ -15,7 +15,7 @@ public struct PBLoader: View {
   let dotsCount: Int
   let dotSize: CGFloat
   let spinnerSpeed: TimeInterval
-  let variant: Variant
+  let variant: Variant?
   let solidLoaderSize: CGFloat
   let color: Color
   let text: String?
@@ -24,7 +24,7 @@ public struct PBLoader: View {
     dotIndex: Int = 0,
     dotsCount: Int = 8,
     dotSize: CGFloat = 2,
-    variant: Variant = .default,
+    variant: Variant? = .default,
     solidLoaderSize: CGFloat = 15,
     spinnerSpeed: TimeInterval = 0.1,
     color: Color = .text(.light),
@@ -76,7 +76,7 @@ extension PBLoader {
   @ViewBuilder
   var loaderVariantView: some View {
     switch variant {
-    case .default:
+      case .default, .none:
       loaderSpinnerView
     case .solid:
       solidLoaderView

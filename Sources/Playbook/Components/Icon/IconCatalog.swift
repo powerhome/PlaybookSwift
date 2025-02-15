@@ -13,13 +13,13 @@ public struct IconCatalog: View {
   public var body: some View {
     PBDocStack(title: "Icon") {
       PBDoc(title: "Default") {
-        PBIcon.fontAwesome(.user, size: .x1)
+        PBIcon.fontAwesome(.user, size: .x1).foregroundStyle(Color.red)
       }
 
       PBDoc(title: "Rotate") {
         HStack(spacing: Spacing.xSmall) {
-          PBIcon(FontAwesome.user, rotation: .right)
-          PBIcon(FontAwesome.user, rotation: .zero)
+          PBIcon(FontAwesome.user, rotation: .right).foregroundStyle(Color.red).foregroundStyle(Color.red)
+          PBIcon(FontAwesome.user, color: .blue, rotation: .zero)
           PBIcon(FontAwesome.user, rotation: .obtuse)
         }
       }

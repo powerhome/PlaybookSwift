@@ -14,6 +14,8 @@
 		F905151F29F03B0700F9B66D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F905151E29F03B0700F9B66D /* Assets.xcassets */; };
 		F905152229F03B0700F9B66D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F905152129F03B0700F9B66D /* Preview Assets.xcassets */; };
 		F905157229F03B7600F9B66D /* Playbook in Frameworks */ = {isa = PBXBuildFile; productRef = F905157129F03B7600F9B66D /* Playbook */; };
+		F906E3972D498435003749FB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E3962D49842E003749FB /* Layout.swift */; };
+		F906E3982D498435003749FB /* Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906E3962D49842E003749FB /* Layout.swift */; };
 		F943570829F070960051C650 /* PlaybookShowcaseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F905151A29F03B0700F9B66D /* PlaybookShowcaseApp.swift */; };
 		F943570929F070E90051C650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F905151E29F03B0700F9B66D /* Assets.xcassets */; };
 		F943570A29F070F10051C650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F905152129F03B0700F9B66D /* Preview Assets.xcassets */; };
@@ -30,6 +32,7 @@
 		F905152129F03B0700F9B66D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F905154629F03B3C00F9B66D /* PlaybookShowcase-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PlaybookShowcase-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F905155129F03B3C00F9B66D /* PlaybookShowcase_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlaybookShowcase_macOS.entitlements; sourceTree = "<group>"; };
+		F906E3962D49842E003749FB /* Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layout.swift; sourceTree = "<group>"; };
 		F937100229EDCC3700FFD0DF /* PlaybookSwift */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = PlaybookSwift; path = ..; sourceTree = "<group>"; };
 		F95597BE2ABCDC32009DA44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +60,7 @@
 		F905151929F03B0700F9B66D /* PlaybookShowcase */ = {
 			isa = PBXGroup;
 			children = (
+				F906E3962D49842E003749FB /* Layout.swift */,
 				F905151A29F03B0700F9B66D /* PlaybookShowcaseApp.swift */,
 				639039862A13A496004576FF /* ContentListView.swift */,
 				F905151E29F03B0700F9B66D /* Assets.xcassets */,
@@ -253,6 +257,7 @@
 			files = (
 				F905151B29F03B0700F9B66D /* PlaybookShowcaseApp.swift in Sources */,
 				639039872A13A496004576FF /* ContentListView.swift in Sources */,
+				F906E3982D498435003749FB /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +267,7 @@
 			files = (
 				F9E5A68A2AA7D02C00830A0C /* ContentListView.swift in Sources */,
 				F943570829F070960051C650 /* PlaybookShowcaseApp.swift in Sources */,
+				F906E3972D498435003749FB /* Layout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
