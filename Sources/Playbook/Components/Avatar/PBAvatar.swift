@@ -16,6 +16,7 @@ public struct PBAvatar: View {
   var status: PBOnlineStatus.Status?
   var statusSize: PBOnlineStatus.Size
   var wrapped: Bool
+  var isActive: Bool
   @Environment(\.colorScheme) var colorScheme
   
   public init(
@@ -24,7 +25,8 @@ public struct PBAvatar: View {
     size: Size = .medium,
     status: PBOnlineStatus.Status? = nil,
     statusSize: PBOnlineStatus.Size = .small,
-    wrapped: Bool = false
+    wrapped: Bool = false,
+    isActive: Bool = true
   ) {
     self.image = image
     self.name = name
@@ -32,6 +34,7 @@ public struct PBAvatar: View {
     self.status = status
     self.statusSize = statusSize
     self.wrapped = wrapped
+    self.isActive = isActive
   }
 
   public var body: some View {
@@ -47,6 +50,7 @@ public struct PBAvatar: View {
         }
       }
       .foregroundColor(.white)
+      .grayscale(isActive ? 0 : 1)
       .frame(width: size.diameter, height: size.diameter)
       .background(Color.status(.neutral))
       .clipShape(Circle())
@@ -60,6 +64,7 @@ public struct PBAvatar: View {
       
       if let status = self.status {
         PBOnlineStatus(status: status, size: statusSize, variant: .border)
+          .grayscale(isActive ? 0 : 1)
           .offset(
             x: (size.diameter/2 - size.diameter/9) * size.statusXModifier,
             y: (size.diameter/2 - size.diameter/6) * size.statusYModifier

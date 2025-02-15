@@ -24,6 +24,9 @@ public struct AvatarCatalog: View {
       PBDoc(title: "Status color") {
         statusColor
       }
+      PBDoc(title: "Greyscale") {
+        greyScale
+      }
     }
   }
 }
@@ -82,6 +85,17 @@ extension AvatarCatalog {
         PBAvatar(image: Image("andrew", bundle: .module), size: .medium, status: .offline, statusSize: .medium)
         Text("Offline").pbFont(.caption)
       }
+    }
+  }
+
+  var greyScale: some View {
+    VStack(alignment: .leading, spacing: Spacing.small) {
+      PBAvatar(image: Image("andrew", bundle: .module), size: .xxSmall, status: .online, isActive: false)
+      PBAvatar(image: Image("andrew", bundle: .module), size: .xSmall, status: .away, isActive: false)
+      PBAvatar(image: Image("andrew", bundle: .module), size: .small, status: .online, isActive: false)
+      PBAvatar(image: Image("andrew", bundle: .module), size: .medium, status: .away, isActive: false)
+      PBAvatar(image: Image("andrew", bundle: .module), size: .large, status: .online, isActive: false)
+      PBAvatar(image: Image("andrew", bundle: .module), size: .xLarge, status: .offline, isActive: false)
     }
   }
 }

@@ -18,6 +18,9 @@ public struct ImageCatalog: View {
       PBDoc(title: "Rounded") {
         roundedImageView
       }
+      PBDoc(title: "GreyScale") {
+        greyScaleView
+      }
     }
   }
 }
@@ -42,6 +45,7 @@ extension ImageCatalog {
       }
     }
   }
+
   var roundedImageView: some View {
     VStack(alignment: .leading, spacing: Spacing.small) {
       ForEach(PBImage.Size.allCases, id: \.rawValue) { size in
@@ -52,6 +56,23 @@ extension ImageCatalog {
             placeholder: Image("Forest", bundle: .module),
             size: size,
             rounded: .rounded
+          )
+        }
+      }
+    }
+  }
+
+  var greyScaleView: some View {
+    VStack(alignment: .leading, spacing: Spacing.small) {
+      ForEach(PBImage.Size.allCases, id: \.rawValue) { size in
+        VStack(alignment: .leading) {
+          Text(size.name).pbFont(.detail(true), color: .text(.default))
+          PBImage(
+            image: nil,
+            placeholder: Image("Forest", bundle: .module),
+            size: size,
+            rounded: .rounded,
+            isActive: false
           )
         }
       }
