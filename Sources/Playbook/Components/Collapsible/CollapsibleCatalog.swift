@@ -14,7 +14,7 @@ public struct CollapsibleCatalog: View {
     let iconSize: PBIcon.IconSize
     let iconColor: CollapsibleIconColor
     let text: String
-    @State private var isCollapsed = true
+    private var isCollapsed = true
 
     var content: some View {
       Text(lorem).pbFont(.body)
@@ -40,7 +40,7 @@ public struct CollapsibleCatalog: View {
     }
 
     var body: some View {
-      PBCollapsible(isCollapsed: $isCollapsed, iconSize: iconSize, iconColor: iconColor) {
+      PBCollapsible(isCollapsed: isCollapsed, iconSize: iconSize, iconColor: iconColor) {
         Text(text).pbFont(.body)
       } content: {
         content

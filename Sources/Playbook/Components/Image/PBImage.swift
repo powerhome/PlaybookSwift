@@ -14,17 +14,19 @@ public struct PBImage: View {
   let placeholder: Image?
   let size: Size?
   let rounded: ImageCornerRadius
-
+  var isActive: Bool
   public init(
     image: Image?,
     placeholder: Image? = nil,
     size: Size? = nil,
-    rounded: ImageCornerRadius = .sharp
+    rounded: ImageCornerRadius = .sharp,
+    isActive: Bool = true
   ) {
     self.image = image
     self.placeholder = placeholder
     self.size = size
     self.rounded = rounded
+    self.isActive = isActive
   }
 
   public var body: some View {
@@ -32,6 +34,7 @@ public struct PBImage: View {
       imageView
         .cornerRadius(rounded.rawValue)
         .frame(width: size.rawValue, height: size.rawValue)
+        .grayscale(isActive ? 0 : 1)
     } else {
       imageView
     }

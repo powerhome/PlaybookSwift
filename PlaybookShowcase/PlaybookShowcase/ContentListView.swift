@@ -13,7 +13,6 @@ import Playbook
 import UIKit
 #endif
 
-@available(iOS 16.4, *)
 struct ContentListView: View {
   let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
   @State var selectedItem: Int = 0
@@ -77,6 +76,7 @@ extension ContentListView {
       ) {
         PBNavItem(DesignElements.title)
         PBNavItem(Components.title)
+        PBNavItem("Layout")
       }
       .scaledToFit()
       .frame(minHeight: 80)
@@ -86,8 +86,10 @@ extension ContentListView {
   private var contentView: some View {
     if selectedItem == 0 {
       designElementsView
-    } else {
+    } else if selectedItem == 1 {
       componentsView
+    } else {
+      LayoutView()
     }
   }
   private var playbookLogo: some View {

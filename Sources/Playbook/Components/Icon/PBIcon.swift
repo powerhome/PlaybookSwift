@@ -17,6 +17,7 @@ public protocol PlaybookGenericIcon {
 public struct PBIcon: View {
   var icon: PlaybookGenericIcon
   var size: IconSize
+  var color: Color?
   var rotation: IconRotation
   var border: Bool
   var flipped: [Axis]?
@@ -24,18 +25,28 @@ public struct PBIcon: View {
   public init(
     _ icon: PlaybookGenericIcon,
     size: IconSize = .x1,
+    color: Color? = nil,
     rotation: IconRotation = .zero,
     border: Bool = false,
     flipped: [Axis]? = nil
   ) {
     self.size = size
     self.icon = icon
+    self.color = color
     self.rotation = rotation
     self.border = border
     self.flipped = flipped
   }
 
   public var body: some View {
+    if let color = color {
+      iconView.foregroundStyle(color)
+    } else {
+      iconView
+    }
+  }
+
+  var iconView: some View {
     Text(icon.unicodeString)
       .font(Font.custom(icon.fontFamily, size: size.fontSize))
       .baselineOffset(-0.5)
